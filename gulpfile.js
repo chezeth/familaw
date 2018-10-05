@@ -23,9 +23,9 @@ gulp.task('browser-sync', function() {
 			baseDir: 'app'
 		},
 		notify: false,
-		// open: false,
+		open: false,
 		// tunnel: true,
-		// tunnel: "projectname", //Demonstration page: http://projectname.localtunnel.me
+		// tunnel: "uraba", //Demonstration page: http://uraba.localtunnel.me
 	})
 });
 

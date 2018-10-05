@@ -9,65 +9,366 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="theme-color" content="#000">
-
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
 
-	<div class="preloader">
+<!-- 	<div class="preloader">
 		<div class="pulse"></div>
-	</div>
+	</div> -->
 
 	<header class="header">
+
 		<div class="container">
 			<div class="header__container">
-		
-				<div class="header__logo">
-					<!-- <a href="index.html"><img src="img/logo.svg" alt="logo" width="160" height="75"></a> -->
-					<h2>ЮРИДИЧЕСКОЕ АГЕНСТВО</h2>
-					<h4>Бракоразводный процесс с 2004г.</h4>
+				<div class="header-logo">
+					<h1 class="header-logo__title">ЮРИДИЧЕСКОЕ АГЕНСТВО</h1>
+					<span class="header-logo__subtitle">Бракоразводный процесс с 2004г.</span>
 				</div>
-
-				<!-- <button class="hamburger" type="button">
+				<button class="hamburger" type="button">
 					<span class="hamburger__box">
 						<span class="hamburger__item"></span>
 					</span>
-				</button> -->
-				<nav class="nav">
-					<ul>
-						<li><a href="index.html" style="color:white">Процесс</a></li>
-						<li><a href="index.html" style="color:white">Услуги</a></li>
-						<li><a href="index.html" style="color:white">Гарантии</a></li>
-						<li><a href="index.html" style="color:white">Обо мне</a></li>
-						<li><a href="catalog.html" style="color:white">Как мы работаем</a></li>
-						<li><a href="about.html" style="color:white">Отзывы</a></li>
-						<li><a href="contacts.html" style="color:white">Контакты</a></li>
+				</button>
+				<nav class="header-nav">
+					<ul class="nav">
+						<li class="nav__item"><a href="#">Процесс</a></li>
+						<li class="nav__item"><a href="#">Услуги</a></li>
+						<li class="nav__item"><a href="#">Гарантии</a></li>
+						<li class="nav__item"><a href="#">Обо мне</a></li>
+						<li class="nav__item"><a href="#">Как мы работаем</a></li>
+						<li class="nav__item"><a href="#">Отзывы</a></li>
+						<li class="nav__item"><a href="#">Контакты</a></li>
 					</ul>
 				</nav>
-
-				<div class="header__post">
-					<h2>+7(917)<span>515-55-55</span></h2>
+				<div class="header-callback">
+					<strong><span>+7 (917) </span>515-55-55</strong>
 					<h5>Заказать звонок</h5>
 				</div>
-
 			</div>
 		</div>
-		<hr size="1px" color="white">
+
 	</header>
+
+	<!-- <section class="title-image">
+		<section class="hero"></section>
+	</section> -->
 
 	<main class="main">
 
-		<section class="header--content section">
+		<section class="hero">
 			<div class="container">
-				<!-- <div class="grid">
-					<div class="grid-item">...</div>
-					<div class="grid-item grid-item--width2">...</div>
-					<div class="grid-item grid-item--width3">...</div>
-					<div class="grid-item grid-item--width4">...</div>
-					<div class="grid-item grid-item--width2">...</div>
-					<div class="grid-item grid-item--width3">...</div>
-				</div> -->
+
+				<div class="hero__content">
+					<img class="man" src="img/man.png" alt="lawyer">
+
+					<p class="hero-title">С ВИСОТЫ МНОГОЛЕТНЕГО ОПЫТА <br>НАХОЖУ <span class="hero-span">ЛУЧШИЕ ПРАВОВЫЕ РЕШЕНИЯ</span></p>
+					<ul class="hero-subtitle">
+						<li class="hero-subtitle__item">Правелиные и вовремя предпринятые действия - моя работа</li>
+						<li class="hero-subtitle__item">Сохраняйте своих детей, имущество и время!</li>
+					</ul>
+					<button class="btn hero-btn">СРОЧНО ПОЛУЧИТЬ ОТВЕТ</button>
+
+					<div class="hero-benefits">
+						<div class="hero-benefits-item">
+							<p class="hero-benefits-item__title">Списание долгов</p>
+							<p class="hero-benefits-item__subtitle">в строк 6 месацев</p>
+						</div>
+						<div class="hero-benefits-item">
+							<p class="hero-benefits-item__title">100% легально</p>
+							<p class="hero-benefits-item__subtitle">на законных основаниях</p>
+						</div>
+						<div class="hero-benefits-item">
+							<p class="hero-benefits-item__title">Под ключ</p>
+							<p class="hero-benefits-item__subtitle">полное сопровождение</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="whywe">
+			<div class="container">
+				<div class="whywe-content">
+					<h2 class="whywe-title"><span class="whywe-title-span">Почему мы, </span>преимущества нашей компании</h2>
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="whywe-item">
+								<div class="whywe-wrap">
+									<img src="img/whywe-1.jpg" alt="PICTURE" class="whywe-item__img" width="270px" height="170px">
+								</div>
+								<p class="whywe-item__title">Доверие клиентов</p>
+								<p class="whywe-item__subtitle">Мы дорожим каждым обратившемся клиентом. Доверие проверенное временем с 2004г.</p>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="whywe-item">
+								<div class="whywe-wrap">
+									<img src="img/whywe-2.jpg" alt="PICTURE" class="whywe-item__img" width="270px" height="170px">
+								</div>
+								<p class="whywe-item__title">Специалисты</p>
+								<p class="whywe-item__subtitle">Штат юристов и адвокатов из ведущих  юридических университетов. Их практика и опыт складывался из самых важных и неразрешимых задач.</p>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="whywe-item">
+								<div class="whywe-wrap">
+									<img src="img/whywe-3.jpg" alt="PICTURE" class="whywe-item__img" height="170px">
+								</div>
+								<p class="whywe-item__title">Нам доверяют СМИ</p>
+								<p class="whywe-item__subtitle">Нам доверяют  СМИ. Интервью юристов публикуются в газетах и журналах по юридической тематике</p>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="whywe-item">
+								<div class="whywe-wrap">
+									<img src="img/whywe-4.jpg" alt="PICTURE" class="whywe-item__img" width="270px" height="170px">
+								</div>
+								<p class="whywe-item__title">Нас рекомендуют</p>
+								<p class="whywe-item__subtitle">Мы на 100% открыты и все действия прозрачны. Нас многие рекомендуют и приводят новых клиентов.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="consultation">
+			<div class="container">
+				<div class="consultation-content">
+					<p class="consultation-title"><span class="consultation-title-span"> Мы понимаем, </span>что у вас больше вопросов, чем ответов</p>
+					<p class="consultation-subtitle">
+						Оставьте заявку на бесплатную консультацию, и наш специалист ответит на все ваши вопросы
+					</p>
+					<div class="consultation-form">
+						<form class="form" action="#">
+							<div class="form-wrap">
+								<input required placeholder="12" value="123" type="text">
+							</div>
+							<input type="text" class="form-controol" placeholder="Введите ваше имя">
+							<input type="text" class="form-controol" placeholder="Введите ваш телефон">
+							<input type="submit" class="btn btn-primary" value="Получить консультацию">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="decide">
+			<div class="container">
+				<div class="decide-content">
+					<h2 class="decide-title"><span class="decide-title-span">Какие вопросы </span>мы решаем?</h2>
+					<div class="row">
+						<div class="col-lg-4 ">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-1.png" alt="#" width="48px" height="40px">
+									<p class="decide-item__title">
+											Расторжение брака
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Проводим процедуру развода с минимальными эмоциональными и финансовыми потерями в суде или органах ЗАГС. Готовим документы и исковое заявление, представляем интересы клиента без необходимости личного присутствия. Оказываем комплексные услуги, включая раздел имущества, алименты и споры о детях
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-2.png" alt="#" width="42px" height="40px">
+									<p class="decide-item__title">
+										Взыскание алиментов
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Помогаем произвести установление и взыскание алиментов под ключ: от стадии мирного решения вопроса до подачи искового заявления и участия в судебном разбирательстве. Взыскиваем алименты в упрощенном порядке, оказываем помощь при индексации невыплаченных сумм
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-3.png" alt="#" width="34px" height="40px">
+									<p class="decide-item__title">
+										Увеличение или уменьшение размера алиментов
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Пересмотр размера алиментов проводится, если изменились материальные обстоятельства плательщика или получателя. Оказываем услуги по увеличению/уменьшению размера алиментов в досудебном и судебном порядке. Сопровождаем процесс под ключ без участия клиента
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-4.png" alt="#" width="40px" height="40px">
+									<p class="decide-item__title">
+										Раздел имущества
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Помогаем провести раздел общего имущества супругов, приобретенного с момента заключения брака. Оцениваем законность брачного контракта, урегулируем споры путем мирных переговоров, защищаем интересы клиента в суде с гарантией успеха
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-5.png" alt="#" width="40px" height="40px">
+									<p class="decide-item__title">
+										Установление отцовства / материнства
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Оказываем полный комплекс услуг по установлению материнства/отцовства: сбор доказательств, показаний свидетелей и заключений экспертов, подготовка и подача искового заявления в суд
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-6.png" alt="#" width="50px" height="40px">
+									<p class="decide-item__title">
+										Определение места жительства ребенка
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Помогаем в урегулировании споров о проживании ребенка/детей после развода родителей. Подготовим пакет документов, соберем характеристики и свидетельства, представим интересы клиента в судебном разбирательстве
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-7.png" alt="#" width="44px" height="40px">
+									<p class="decide-item__title">
+										Определение порядка общения ребенка и родителей
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Проводим процедуру развода с минимальными эмоциональными и финансовыми потерями в суде или органах ЗАГС. Готовим документы и исковое заявление, представляем интересы клиента без необходимости личного присутствия. Оказываем комплексные услуги, включая раздел имущества, алименты и споры о детях
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-8.png" alt="#" width="39px" height="40px">
+									<p class="decide-item__title">
+										Лишение / ограничение родительских прав
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Ограничение/лишение прав родителей означает запрещение заниматься воспитанием ребенка. Помогаем в общении с органами опеки, собираем необходимые доказательства, гарантированно защищаем интересы детей в суде
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="decide-item">
+								<div class="decide-item-wrap">
+									<img class="decide-item__img" src="img/decide-9.png" alt="#" width="31px" height="40px">
+									<p class="decide-item__title">
+										Усыновление / удочерение
+									</p>
+								</div>
+								<p class="decide-item__subtitle">
+									Упрощаем процесс усыновления и удочерения, минуя бюрократические препоны. Разъясняем все нюансы процедуры, содействуем в сборе документов и общении с государственными органами, представляем интересы клиента в суде
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cost">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-10">
+						<div class="cost-content">
+							<h2 class="cost-title"><span class="cost-span">СТОИМОСТЬ </span>НАШИХ УСЛУГ</h2>
+							<div class="cost-wrap">
+								<div class="cost-item">
+									<p class="cost-item__title">Юридическая консультация</p><span class="cost-item-span"></span><p class="cost-item__title">3 000 руб.</p>
+								</div>
+								<div class="cost-item">
+									<p class="cost-item__title">Составление документов </p><span class="cost-item-span"></span><p class="cost-item__title">от 5 000 руб.</p>
+								</div>
+								<p class="cost-item__subtitle">(заявлений, жалоб, претензий, обращений, искового заявления, отзыва на иск,<br> возражения на иск, апелляционной, кассационной и надзорной жалобы и пр.)</p>
+								<div class="cost-item">
+									<p class="cost-item__title">Представление (защита) интересов в суде</p><span class="cost-item-span"></span><p class="cost-item__title">от 20 000 руб.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="guarantees">
+			<div class="container">
+				<div class="guarantees-content">
+					<h2 class="guarantees-title"><span class="guarantees-span">Наши </span>гарантии</h2>
+					<div class="row justify-content-center">
+						<div class="col-lg-4">
+							<div class="guarantees-item">
+								<p class="guarantees-item__subtitle">
+									<span class="guarantees-item__span--32"> 12 </span><span class="guarantees-item__span--24">лет <br>безупречной работы</span>
+									Оказываем юридические услуги и боремся за права клиента до полной победы
+								</p>
+								<img src="img/guarantees-1.png" alt="#" class="guarantees-item__img" width="43px" height="43px">
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="guarantees-item">
+								<p class="guarantees-item__subtitle">
+									<span class="guarantees-item__span--32">Договор </span><br>
+									Мы подписываем договор и второй экземпляр остается у вас. <span>На любом этапе можете расторгнуть договор</span>
+								</p>
+								<img src="img/guarantees-2.png" alt="#" class="guarantees-item__img" width="32px" height="43px">
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="guarantees-item">
+								<p class="guarantees-item__subtitle">
+									<span class="guarantees-item__span--32">Оплата </span><br>
+									Полная оплата только по факту выигрыша дела
+								</p>
+								<img src="img/guarantees-3.png" alt="#" class="guarantees-item__img" width="44px" height="43px">
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="guarantees-item">
+								<p class="guarantees-item__subtitle">
+									<span class="guarantees-item__span--32"> 600 </span><span class="guarantees-item__span--24">сложныйх дел</span>
+									Выиграны в первой инстанции
+								</p>
+								<img src="img/guarantees-4.png" alt="file" class="guarantees-item__img">
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="guarantees-item">
+								<p class="guarantees-item__subtitle">
+									<span class="guarantees-item__span--32"> 460 </span><span class="guarantees-item__span--24">семеных дел </span>
+									Заключены мировые соглашения
+								</p>
+								<img src="img/guarantees-5.png" alt="family" class="guarantees-item__img">
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="guarantees-item">
+								<p class="guarantees-item__subtitle">
+									<span class="guarantees-item__span--24">более <span class="guarantees-item__span--32"> 196 </span>дел </span><br>
+									Были пересмотрены в верховном суде РФ
+								</p>
+								<img src="img/guarantees-6.png" alt="document" class="guarantees-item__img">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -104,7 +405,6 @@
 		<p>Мы обязательно с вами свяжемся!</p>
 	</div>
 	<!-- 	modal end-->
-
 	<script src="js/scripts.min.js"></script>
 </body>
 </html>
