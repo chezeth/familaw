@@ -2,6 +2,9 @@
 @import "base"
 @import "page"
 
+textarea
+	resize: none
+
 .header
 	position: fixed
 	right: 0
@@ -263,6 +266,7 @@ strong
 		margin-bottom: 37.5px
 
 .guarantees
+	background-color: #fafafa
 	color: black
 	padding: 82px 0 24px
 	&-title
@@ -272,8 +276,6 @@ strong
 	&-span
 		font-weight: 900
 
-.guarantees
-	background-color: #fafafa
 
 .guarantees-item
 	padding-left: 83px
@@ -304,13 +306,144 @@ strong
 		font-size: 24px
 		line-height: normal
 
-.question,
-.history,
-.howwork,
-.review
+.howwork, .review
 	color: black
 
 
+.question
+	background: url(../img/question.jpg) no-repeat center top / cover
+	padding: 100px 0 90px
+	&-content
+		margin-left: -30px
+	&-title
+		font-size: 30px
+		font-weight: 900
+		line-height: 0.8
+		text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15)
+		margin-bottom: 10px
+	&-subtitle
+		font-size: 16px
+		margin-bottom: 35px
+
+.question-form
+	display: flex
+	&-wrap
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		justify-content: space-between
+
+.question-input
+	font-size: 12px
+	font-family: OpenSans
+	line-height: 1.2
+	padding: 13px 20px
+	border-radius: 5px
+	border: 2px solid white
+	min-width: 270px
+	&-wrap
+		// margin-right: 20px
+.form-wrap
+	display: flex
+	flex-wrap: wrap
+
+.form-wrap__col
+	width: 50%
+
+.history
+	color: black
+	&-content
+		padding-top: 85px
+	&-title
+		margin-bottom: 40px
+		font-size: 48px
+		line-height: 1.2
+	&-span
+		font-weight: 700
+	&-subtitle
+		margin-bottom: 25px
+		font-size: 24px
+		line-height: 1
+		font-weight: 700
+	&-text 
+		margin-bottom: 30px
+		font-size: 14px
+		line-height: 1.7
+	&-posttext, &-sign 
+		font-size: 14px
+		line-height: 1.7
+		font-weight: 600
+	&-posttext
+		margin-left: 20px
+		margin-bottom: 30px
+	&-sign
+		margin-left: 300px
+
+
+.scrollbar-wrap
+  height: 300px
+  box-sizing: border-box
+  max-width: 100%
+  padding-right: 45px
+  position: relative
+
+.scroll-history
+  height: 100%
+  overflow-y: scroll
+
+#scrollbar-container
+    position: absolute
+    right: 0px
+    bottom: 0px
+    top: 0px
+    width: 2px
+
+#scrollbar 
+  position: absolute
+  right: 0
+  left: 0
+  height: 30px
+  background: rgba(0, 0, 0, 0.5)
+
+::-webkit-scrollbar 
+  display: none
+
+
+
+.howwork
+	background-color: #fafafa
+	color: black
+	padding: 80px 0 60px
+	&-title
+		text-align: center
+		font-size: 48px
+		margin-bottom: 50px
+	&-span
+		font-weight: 900
+
+.howwork-items
+	display: flex
+	justify-content: space-between
+
+.howwork-item
+	&__title
+		font-size: 18px
+		line-height: 1.33
+		font-weight: 700
+		margin-bottom: 20px
+	&__subtitle
+		font-size: 13px
+		line-height: 1.85
+	&__img
+		margin-bottom: 18px
+		// &::after
+		// 	content: ''
+			// background: url('../img/howwork-1-1.png') no-repeat center top / cover
+			// width: 32px
+			// height: 43px
+			// position: absolute
+			// top: 0
+			// left: 0
 
 .footer
 	height: 1000px

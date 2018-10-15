@@ -1,10 +1,10 @@
 $(function() {
   
 //----------------------------masonry-------------------------------
-  $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 1
-  });
+  // $('.grid').masonry({
+  //   itemSelector: '.grid-item',
+  //   columnWidth: 1
+  // });
 
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
@@ -88,6 +88,43 @@ $(function() {
      // $('.nav-active').removeClass('nav-active');
 
   });
+
+
+var container = document.getElementById('scrollbar-container'),
+    content = document.getElementById('content'),
+    scroll = document.getElementById('scrollbar');
+
+  
+
+content.addEventListener('scroll', function(e) {
+  // scroll.style.height = container.clientHeight * content.clientHeight / content.scrollHeight + "px";
+  scroll.style.height = "30" + "px";
+  // scroll.style.top = content.scrollTop * container.clientHeight / content.scrollHeight + "px";
+  scroll.style.top = (((300 + content.scrollTop) * scroll.clientHeight) / content.clientHeight - 30)   + "px";
+  // scroll.style.top = content.scrollTop * container.clientHeight / 30 + "px";
+
+  console.log('top:', scroll.style.top);
+  console.log('clientHeight:', container.clientHeight, 'content.scrollTop:', content.scrollTop, 'content.scrollHeight:', content.scrollHeight )
+});
+var event = new Event('scroll');
+
+window.addEventListener('resize', content.dispatchEvent.bind(content, event));
+content.dispatchEvent(event);
+
+scroll.addEventListener('mousedown', function(start){
+  start.preventDefault();
+  var y = scroll.offsetTop;
+  var onMove = function(end){
+    var delta = end.pageY - start.pageY;
+    scroll.style.top = Math.min(container.clientHeight - scroll.clientHeight, Math.max(0, y + delta)) + 'px';
+    content.scrollTop = (content.scrollHeight * scroll.offsetTop / container.clientHeight);
+  };
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('mouseup', function(){
+    document.removeEventListener('mousemove', onMove);
+  });
+});
+
   
 });
 
