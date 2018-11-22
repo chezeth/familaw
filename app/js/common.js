@@ -89,44 +89,95 @@ $(function() {
 
   });
 
+  //скрол в слайді історія
 
-var container = document.getElementById('scrollbar-container'),
-    content = document.getElementById('content'),
-    scroll = document.getElementById('scrollbar');
+  var container = document.getElementById('scrollbar-container'),
+      content = document.getElementById('content'),
+      scroll = document.getElementById('scrollbar');
 
-  
+    
 
-content.addEventListener('scroll', function(e) {
-  // scroll.style.height = container.clientHeight * content.clientHeight / content.scrollHeight + "px";
-  scroll.style.height = "30" + "px";
-  // scroll.style.top = content.scrollTop * container.clientHeight / content.scrollHeight + "px";
-  scroll.style.top = (((300 + content.scrollTop) * scroll.clientHeight) / content.clientHeight - 30)   + "px";
-  // scroll.style.top = content.scrollTop * container.clientHeight / 30 + "px";
+  content.addEventListener('scroll', function(e) {
+    // scroll.style.height = container.clientHeight * content.clientHeight / content.scrollHeight + "px";
+    scroll.style.height = "30" + "px";
+    // scroll.style.top = content.scrollTop * container.clientHeight / content.scrollHeight + "px";
+    // scroll.style.top = (((300 + content.scrollTop) * scroll.clientHeight) / content.clientHeight - 30)   + "px";
+    // scroll.style.top = content.scrollTop * container.clientHeight * (container.clientHeight * content.clientHeight / content.scrollHeight / 82 ) / content.scrollHeight + "px";
+    scroll.style.top =  content.scrollTop * ( (content.clientHeight - 30) / (content.scrollHeight - content.clientHeight) ) + "px";
 
-  console.log('top:', scroll.style.top);
-  console.log('clientHeight:', container.clientHeight, 'content.scrollTop:', content.scrollTop, 'content.scrollHeight:', content.scrollHeight )
-});
-var event = new Event('scroll');
-
-window.addEventListener('resize', content.dispatchEvent.bind(content, event));
-content.dispatchEvent(event);
-
-scroll.addEventListener('mousedown', function(start){
-  start.preventDefault();
-  var y = scroll.offsetTop;
-  var onMove = function(end){
-    var delta = end.pageY - start.pageY;
-    scroll.style.top = Math.min(container.clientHeight - scroll.clientHeight, Math.max(0, y + delta)) + 'px';
-    content.scrollTop = (content.scrollHeight * scroll.offsetTop / container.clientHeight);
-  };
-  document.addEventListener('mousemove', onMove);
-  document.addEventListener('mouseup', function(){
-    document.removeEventListener('mousemove', onMove);
+    // console.log('top:', scroll.style.top);
+    // console.log('clientHeight:', container.clientHeight, 'content.scrollTop:', content.scrollTop, 'content.scrollHeight:', content.scrollHeight )
   });
-});
+  var event = new Event('scroll');
+
+  window.addEventListener('resize', content.dispatchEvent.bind(content, event));
+  content.dispatchEvent(event);
+
+  scroll.addEventListener('mousedown', function(start){
+    start.preventDefault();
+    var y = scroll.offsetTop;
+    var onMove = function(end){
+      var delta = end.pageY - start.pageY;
+      scroll.style.top = Math.min(container.clientHeight - scroll.clientHeight, Math.max(0, y + delta)) + 'px';
+      content.scrollTop = (content.scrollHeight * scroll.offsetTop / container.clientHeight);
+    };
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', function(){
+      document.removeEventListener('mousemove', onMove);
+    });
+  });
+
+  // --------свайпер----------------------------------
+
+  var mySwiper = new Swiper ('.review-swiper', {
+
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.review-swiper-next',
+      prevEl: '.review-swiper-prev',
+    },
+    
+  });
+
+  var mySwiper2 = new Swiper ('.top7-swiper', {
+    
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination',
+        type: "bullets",
+      },
+  });
+
+
+  //---------акордеон--------------
+
+  $(".acord-head").click(function() {
+    if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).next().slideUp();
+    } else {
+        $(".acord-head").removeClass("active");
+        $(".acord-body").slideUp();
+        $(this).addClass('active');
+        $(this).next().slideDown();
+    }
+  });
+
+  // var accBtns=document.getElementsByClassName("acord-head");
+  //   for (var i = 0; i < accBtns.length; i++) {
+  //     accBtns[i].addEventListener("click", function () {
+  //       this.parentElement.classList.toggle("active")
+  //       console.log(this.parentElement)
+  //       var accBody=this.nextElementSibling
+        
+
+  //     })
+  //   }
 
   
 });
+
+
 
 //----------------------------------------preloader----------------------------------
 

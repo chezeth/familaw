@@ -22,6 +22,14 @@ textarea
 		flex-direction: row
 		justify-content: space-between
 		align-items: center
+	&-logo 
+		font-family: OpenSans
+		&__title
+			font-size: 22px
+			font-weight: 900
+		&__subtitle
+			font-size: 14px
+			font-weight: 400
 	&-callback
 		text-align: right
 
@@ -29,8 +37,9 @@ textarea
 	display: flex
 	flex-direction: row
 	justify-content: space-between
+	font-size: 12px
 	&__item
-		margin-right: 20px
+		margin-right: 25px
 		&:last-child
 		 margin-right: 0
 
@@ -48,6 +57,10 @@ strong
 	font-size: 20px
 	& span
 		font-weight: 700
+img
+	max-width: 100%
+	height: auto
+	display: inline-block
 	
 .modal
 	background-color: rgba(30,80,210,0.75)
@@ -57,8 +70,8 @@ strong
 		min-width: 150px
 	&-personal
 		color: orange
-		&:hover
-			text-decoration: underline solid
+		// &:hover
+		// 	// text-decoration: underline solid
 
 .wrapper
 	text-align: center
@@ -74,7 +87,7 @@ strong
 
 
 .hero
-	background: url(../img/title.png) no-repeat center top / cover
+	background: url(../img/title.png) no-repeat center center / cover
 	&__content
 		position: relative
 		margin: 190px 0 85px
@@ -83,16 +96,17 @@ strong
 		font-weight: 400
 		font-size: 34px
 		line-height: 50px
-		margin-bottom: 15px
+		margin-bottom: 45px
 		text-shadow: 0px 2px 2px rgba(23, 22, 22, 0.5)
 		& span
 			font-size: 32px
 			font-weight: 900
 		
 	&-subtitle
-		margin-bottom: 45px
+		margin-bottom: 35px
 		&__item
-		font-size: 18px
+			font-size: 18px
+			margin-bottom: 10px
 	&-benefits
 		width: 63%
 		margin-top: 140px
@@ -157,7 +171,16 @@ strong
 			&:hover
 				transform: scale(1.3)
 		&__title
+			font-weight: 600
+			font-size: 18px
+			font-family: OpenSans
 			margin-bottom: 30px
+			line-height: 1.2
+		&__subtitle
+			font-family: OpenSans
+			font-size: 13px
+			font-weight: 400
+			line-height: 1.8
 	&-wrap
 		overflow: hidden
 		height: 170px
@@ -209,7 +232,7 @@ strong
 			font-size: 18px
 			font-weight: 700
 			min-height: 53.3px
-			line-height: 1.5
+			line-height: 1.2
 			vertical-align: middle
 			display: flex
 			align-items: center
@@ -288,7 +311,7 @@ strong
 		top: 8px
 	&__subtitle
 		font-size: 13px
-		line-height: 24px
+		line-height: 1.8
 		&:before
 			content: ''
 			background: url(../img/guarantees-ellipse.png) no-repeat center top / cover
@@ -297,6 +320,16 @@ strong
 			position: absolute
 			left: 7px
 			top: 0
+	&__span--bold
+			font-weight: 600
+			text-transform: uppercase
+	&__span--32
+		font-size: 32px
+		line-height: 1.2
+	&__span--24
+		font-size: 24px
+		line-height: 1.2
+
 			
 .guarantees-item__span
 	&--32
@@ -306,7 +339,8 @@ strong
 		font-size: 24px
 		line-height: normal
 
-.howwork, .review
+.howwork, 
+.review
 	color: black
 
 
@@ -318,12 +352,13 @@ strong
 	&-title
 		font-size: 30px
 		font-weight: 900
-		line-height: 0.8
+		line-height: 1.2
 		text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15)
 		margin-bottom: 10px
 	&-subtitle
 		font-size: 16px
 		margin-bottom: 35px
+		line-height: 1.5
 
 .question-form
 	display: flex
@@ -341,17 +376,31 @@ strong
 	border-radius: 5px
 	border: 2px solid white
 	min-width: 270px
-	&-wrap
-		// margin-right: 20px
+
 .form-wrap
 	display: flex
 	flex-wrap: wrap
 
 .form-wrap__col
 	width: 50%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-bottom: 20px
+	padding-right: 30px
 
+//--------------------------------------history----------------
 .history
 	color: black
+	position: relative
+	&-bg-right
+		width: 945px
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 50%
+		background: url(../img/history.jpg) no-repeat center left / cover
 	&-content
 		padding-top: 85px
 	&-title
@@ -369,6 +418,8 @@ strong
 		margin-bottom: 30px
 		font-size: 14px
 		line-height: 1.7
+		font-family: OpenSans
+		font-weight: 400
 	&-posttext, &-sign 
 		font-size: 14px
 		line-height: 1.7
@@ -376,16 +427,29 @@ strong
 	&-posttext
 		margin-left: 20px
 		margin-bottom: 30px
+		&:before
+			content: ''
+			background: url(../img/stick.png)
+			width: 2px
+			height: 68px
+			position: absolute
+			left: 0
 	&-sign
 		margin-left: 300px
+		margin-bottom: 70px
+	&-img
+		height: 100%
+		width: 100%
+		object-fit: cover
 
 
 .scrollbar-wrap
-  height: 300px
+  // height: 300px
   box-sizing: border-box
   max-width: 100%
   padding-right: 45px
   position: relative
+  // overflow: hidden
 
 .scroll-history
   height: 100%
@@ -397,6 +461,7 @@ strong
     bottom: 0px
     top: 0px
     width: 2px
+    background-color: #d7e3e0
 
 #scrollbar 
   position: absolute
@@ -422,10 +487,16 @@ strong
 		font-weight: 900
 
 .howwork-items
+	margin: 0 -15px
 	display: flex
-	justify-content: space-between
+	flex-direction: row
+	justify-content: space-around
+	position: relative
+	flex-wrap: wrap
 
 .howwork-item
+	flex: 1
+	margin: 0 15px
 	&__title
 		font-size: 18px
 		line-height: 1.33
@@ -434,17 +505,454 @@ strong
 	&__subtitle
 		font-size: 13px
 		line-height: 1.85
-	&__img
-		margin-bottom: 18px
-		// &::after
-		// 	content: ''
-			// background: url('../img/howwork-1-1.png') no-repeat center top / cover
-			// width: 32px
-			// height: 43px
-			// position: absolute
-			// top: 0
-			// left: 0
+	&__posttitle
+		font-weight: 600
+		text-transform: uppercase
+		font-size: 13px
+		line-height: 1.85
 
+.howwork-item-img
+	margin-bottom: 24px
+	&__text
+		font-size: 45.84px
+		font-weight: 500
+		color: #ebeced
+	&__img
+		position: absolute
+		top: 15px
+
+
+//---------------------------------------------review----------
+.review
+	padding: 90px 0 130px
+	&-title
+		text-align: center
+		margin-bottom: 55px
+		font-size: 48px
+	&-span
+		font-weight: 900
+.review-swiper-wrap
+	position: relative
+.review-swiper
+	margin: 0 -30px
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1)
+.review-slide-title
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 20px 60px
+	border-bottom: 1px solid rgb(242, 242, 242)
+	&-name
+		font-size: 12px
+		font-weight: 200
+		line-height: 1.5
+		& span
+			font-size: 16px
+			font-weight: 600
+			line-height: 1.2
+.review-slide-content
+	padding: 25px 60px 35px
+	position: relative
+	& span
+		font-weight: 700
+		font-size: 16px
+	& p 
+		font-size: 14px
+		font-weight: 200
+		line-height: 1.7
+
+.review-swiper-next
+	position: absolute
+	right: -105px
+	top: 0
+	bottom: 0
+	margin: auto
+	height: 41px
+	width: 41px
+	border: none
+	background-color: #fff
+	border-radius: 50%
+	&::after
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		transform-origin: right center
+		transform: rotate(-45deg)		
+		content: ''
+		background: linear-gradient(to left, #ef8d14, #e5700f)
+		height: 2px
+		width: 10px
+	&::before
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		transform-origin: right center
+		transform: rotate(45deg)
+		content: ''
+		background: linear-gradient(to left, #ef8d14, #feba1c)
+		height: 2px
+		width: 10px
+
+.review-swiper-prev
+	position: absolute
+	left: -105px
+	top: 0
+	bottom: 0
+	margin: auto
+	height: 41px
+	width: 41px
+	border: none
+	background-color: #fff
+	border-radius: 50%
+	&::after
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		transform-origin: left center
+		transform: rotate(-45deg)		
+		content: ''
+		background: linear-gradient(to right, #ef8d14, #feba1c)
+		height: 2px
+		width: 10px
+	&::before
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		transform-origin: left center
+		transform: rotate(45deg)
+		content: ''
+		background: linear-gradient(to right, #ef8d14, #e5700f)
+		height: 2px
+		width: 10px
+
+// --------------3rd variant-----
+//.swiper-prev
+// 	position: absolute
+// 	left: -75px
+// 	bottom: 0
+// 	top: 0
+// 	margin: auto
+// 	height: 45px
+// 	width: 45px
+// 	border: solid 2px red
+// 	border-radius: 50%
+// 	&::after
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		right: 0
+// 		bottom: 0
+// 		margin: auto
+// 		transform: translateX(25%) rotate(45deg) 		
+// 		content: ''
+// 		background-color: transparent
+// 		border-left: solid 2px red
+// 		border-bottom: solid 2px red		
+// 		height: 12px
+// 		width: 12px
+
+.review-swiper-circle
+	position: absolute
+	border-radius: 50%
+	top: -2px
+	left: -2px
+	right: -2px
+	bottom: -2px
+	z-index: -1
+	margin: auto
+	background: linear-gradient(to top, #e5700f, #feba1c)
+
+.review-slide-rectangle-1
+  background-color: rgb(250, 250, 250)
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1)
+  position: absolute
+  left: 5px
+  right: 5px
+  bottom: -20px
+  margin: auto	
+  height: 20px
+.review-slide-rectangle-2
+  background-color: rgb(250, 250, 250)
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1)
+  position: absolute
+  left: 25px
+  right: 25px
+  bottom: -40px
+  margin: auto	
+  height: 40px
+
+//-----------------------------------------top7-------------
+.top7
+	background-color: #fafafa
+	color: black
+	padding: 75px 0 50px
+	max-height: 690px
+
+.top7-content
+	position: relative
+
+.top7-title
+	font-size: 48px
+	font-weight: 400
+	margin-bottom: 40px
+	line-height: 1.2
+	& span
+		font-weight: 900
+
+.top7-acords
+	padding-left: 35px
+	counter-reset: section
+	max-height: 410px
+	overflow: scroll
+	margin-bottom: 25px
+
+.acord-head
+	position: relative
+	display: flex
+	justify-content: space-between
+	align-items: center
+	border-bottom: dashed 1px rgb(166, 162, 151)
+	margin-bottom: 25px
+	cursor: pointer
+	&:before
+		content: ''
+		width: 22px
+		height: 22px
+		border-radius: 50%
+		background: linear-gradient(to top, #e5700f, #feba1c)
+		position: absolute
+		left: -32px
+	&:after
+		counter-increment: section
+		content: counters(section, "") ""
+		position: absolute
+		left: -25px
+		font-size: 14px
+		line-height: 2.143
+		color: white
+	  // font-family: "ProximaNova"
+
+.acord-head.active
+	border-bottom: none
+	& .acord-head-arrow
+		transform: rotate(180deg)
+
+
+.acord-head-title
+	font-size: 14px
+	line-height: 2.14
+
+.acord-head-arrow
+	width: 10px
+	height: 7px
+	background: url(../img/arrow.png)
+
+.acord-body
+	display: none
+	margin: 20px 0
+	padding: 27px
+	background-color: #ebeced
+	line-height: 1.7
+	font-size: 14px
+
+.top7-frame 
+	position: relative
+	&-img 
+		box-shadow: 0 0 50px rgba(0,0,0,0.302)
+.top7-swiper
+	position: absolute
+	top: 40px
+	left: 40px
+	bottom: 40px
+	right: 40px
+	margin: auto
+
+.top7-vertical
+	transform: rotate(-90deg)
+	transform-origin: left top 0
+	position: absolute
+	left: -71px
+	bottom: -91px
+	white-space: nowrap
+	text-transform: uppercase
+	color: rgb(230, 230, 230)
+	font-size: 60px
+	font-weight: 700
+	line-height: 1.2
+	letter-spacing: 0.02em
+
+.swiper-pagination
+	width: 100%
+	margin: 30px auto 0
+	display: flex
+	justify-content: center
+	&-bullet
+		margin: 0 5px
+		width: 20px
+		height: 1px
+		background-color: #a5a196
+		&-active
+			width: 20px
+			height: 2px
+			background-color: #ffbb1c
+
+//----------------------------------------maps-------------------
+.maps
+	height: 470px
+	position: relative
+#map
+	height: 100%
+
+.marker
+	padding: 40px
+	position: absolute
+	top: 29%
+	left: 50%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	background-color: #fff
+	border-radius: 5px
+	box-shadow: 0px 7px 15px 0px rgba(23, 22, 22, 0.15)
+	&:after
+		content: ''
+		background: url(../img/location.png)
+		width: 155px
+		height: 204px
+		position: absolute
+		top: -9px
+		right: -5px
+
+.marker-item
+	color: black
+	display: flex
+	align-items: center
+
+.marker-contacts
+	&-title
+		font-family: OpenSans
+		font-size: 28px
+		font-weight: 700
+		line-height: 1.2
+		margin-bottom: 30px
+	&-subtitle
+		margin-bottom: 30px
+		&-text
+			font-size: 12px
+			font-weight: 600
+			line-height: 1.2
+			margin-right: 10px
+		&-tel
+			font-family: OpenSans
+			font-size: 16px
+			font-weight: 400
+			text-transform: uppercase
+			line-height: 1.2
+			& span 
+				font-weight: 700
+
+.marker-adress
+	display: flex
+	margin-left: 22px
+	&-text 
+		margin-right: 18px
+		font-family: OpenSans
+		font-size: 12px
+		font-weight: 700
+		line-height: 2.25
+	&-adress 
+		font-family: OpenSans
+		font-size: 14px
+		line-height: 1.929
+		text-align: left
+
+.btn-marker
+	padding: 16px 77px
+	white-space: nowrap
+	letter-spacing: 0.05em
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15)
+
+
+//-----------------------------------------footer----------------
 .footer
-	height: 1000px
+	padding: 30px 0 20px 
+	background-color: #030819
+	color: #fff
+.footer-container
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+.footer-logo
+	line-height: 1.2
+	&-title
+		font-family: OpenSans
+		font-size: 22px
+		font-weight: 900
+		text-transform: uppercase
+	&-subtitle
+		margin-bottom: 30px
+		font-size: 14px
+		color: rgb(82,86,102)
+	&-copyright
+		font-size: 12px
+		color: rgb(77,77,77)
+.footer-menu
+	font-family: OpenSans
+	line-height: 1.2
+	&-title
+		margin-bottom: 25px
+		font-size: 28px
+		font-weight: 900
+		color: rgb(82,86,102)
+.footer-callback
+	font-family: OpenSans
+	line-height: 1.2
+	&-title
+		margin-bottom: 25px
+		font-size: 28px
+		font-weight: 900
+		color: rgb(82,86,102)
+		text-align: left
+	&-tel 
+		position: relative
+		padding-left: 35px
+		text-align: right
+		font-size: 18px
+		font-weight: 400
+		& span 
+			font-weight: 700
+		&:before
+			content: ''
+			width: 17px
+			height: 17px
+			background: url(../img/phone.png) no-repeat center top / cover
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			margin: auto
+	&-subtel 
+		font-size: 12px
+		line-height: 1.75
+		text-align: right
+
+
+
+
+		
+
+
+
 @import "media" // Always at the end
