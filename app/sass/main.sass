@@ -436,7 +436,7 @@ img
 			left: 0
 	&-sign
 		margin-left: 300px
-		margin-bottom: 70px
+		// margin-bottom: 70px
 	&-img
 		height: 100%
 		width: 100%
@@ -453,7 +453,9 @@ img
 
 .scroll-history
   height: 100%
-  overflow-y: scroll
+  // overflow-y: scroll
+  overflow: hidden
+  margin-bottom: 70px
 
 #scrollbar-container
     position: absolute
@@ -470,8 +472,8 @@ img
   height: 30px
   background: rgba(0, 0, 0, 0.5)
 
-::-webkit-scrollbar 
-  display: none
+// ::-webkit-scrollbar 
+//   display: none
 
 
 
@@ -572,6 +574,7 @@ img
 	border: none
 	background-color: #fff
 	border-radius: 50%
+	cursor: pointer
 	&::after
 		position: absolute
 		top: 0
@@ -610,6 +613,7 @@ img
 	border: none
 	background-color: #fff
 	border-radius: 50%
+	cursor: pointer
 	&::after
 		position: absolute
 		top: 0
@@ -637,7 +641,7 @@ img
 		height: 2px
 		width: 10px
 
-// --------------3rd variant-----
+// --------------2nd variant-----
 //.swiper-prev
 // 	position: absolute
 // 	left: -75px
@@ -717,6 +721,7 @@ img
 	max-height: 410px
 	overflow: scroll
 	margin-bottom: 25px
+	overflow: hidden
 
 .acord-head
 	position: relative
