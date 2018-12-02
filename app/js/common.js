@@ -53,9 +53,9 @@ $(function() {
   function ajaxSend(formName, data) {
     jQuery.ajax({
       type: "POST",
-      url: "localhost/sendmail.php",
+      url: "sendmail.php",
       data: data,
-      success: function() {
+      success: function(data) {
         $(".modal").popup("hide");
         $("#thanks").popup("show");
         setTimeout(function() {
