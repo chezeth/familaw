@@ -7,7 +7,7 @@
 	.nav
 		font-size: 11px
 		&__item 
-			margin-right: 21px
+			// margin-right: 21px
 	.header-callback__tel
 		font-size: 15px
 	.hero
@@ -99,6 +99,85 @@
 		&__span--24
 			font-size: 20px
 
+	.question
+		padding: calc(100px*0.83) 0 calc(90px*0.83)
+		&-content
+			margin-left: -25px
+		&-title 
+			font-size: 28px
+		&-subtitle 
+			font-size: 15px
+		&-input
+			min-width: 220px
+		&-btn 
+			min-width: 220px
+	.form-wrap__col
+		padding-right: 25px
+		margin-bottom: 17px
+
+	.history
+		&-content
+			padding-top: calc(85px*0.83)
+		&-title
+			font-size: 46px 
+		&-sign
+			margin-left: 200px
+	.scroll-history
+		margin-bottom: calc(70px*0.83)
+
+	.howwork
+		padding: calc(80px*0.83) 0 calc(60px*0.83)
+		&-title 
+			font-size: 46px
+			margin-bottom: calc(50px*0.83)
+
+	.review
+		padding: calc(90px*0.83) 0 calc(130px*0.83)
+
+	.top7
+		padding: calc(75px*0.83) 0 calc(50px*0.83)
+		&-title
+			font-size: 40px
+			margin-bottom: 20px
+	.acord
+		&-head 
+			margin-bottom: 20px
+		&-body 
+			margin: 15px 0
+			padding: 22px
+
+	.marker
+		padding: 20px
+		&-btn 
+			min-width: 240px
+		&-contacts-title
+			margin-bottom: 25px
+		&-adress-subtext
+			font-size: 13px
+
+	.footer 
+		padding: 20px 0 10px
+		&-logo
+			&-title
+				font-size: 18px
+			&-subtitle
+				margin-bottom: 25px
+				font-size: 12px
+		&-menu
+			&-title
+				margin-bottom: 20px
+			& .nav-item
+				margin-right: 15px
+				&:last-child
+					margin-right: 0
+		&-callback
+			&-title 
+				margin-bottom: 20px
+			&-tel 
+				padding-left: 20px
+				font-size: 15px
+
+
 @media only screen and (max-width : 992px)
 
 	.header
@@ -132,28 +211,28 @@
 			font-size: 10px
 		h3
 			margin-bottom: 20px
-	.nav
+	.header .nav
 		position: fixed
 		display: flex
 		width: 100%
 		height: 100%
 		flex-direction: column
-		justify-content: center
+		justify-content: space-around
 		right: -100%
 		top: 0px
-		padding-top: 51px
+		padding: 100px 50px
 		z-index: -1
-		background: rgba(0, 0, 0, .9)
+		background: rgba(3, 8, 25, .9)
 		transition: all .3s
 		text-align: center
 		text-transform: uppercase
-		font-size: 12px
+		font-size: 18px
 	.header-nav.nav-active .nav
 		right: 0
 		z-index: 100
 		.nav-item
 			margin: 0
-			margin-bottom: 30px
+			margin-bottom: 10px
 		& a
 			color: #fff
 			display: block
@@ -161,7 +240,7 @@
 			&:hover
 				color: orange
 				border: none
-				font-size: 16px
+				font-size: 24px
 			&:active
 				font-weight: 900
 	.hamburger
@@ -237,6 +316,111 @@
 			margin-bottom: calc(76px*0.63)
 	.guarantees-item
 		margin-bottom: calc(62px*0.63)
+
+	.question
+		padding: calc(100px*0.63) 0 calc(90px*0.63)
+		&-content
+			margin-left: -20px
+		&-title 
+			font-size: 26px
+		&-subtitle 
+			font-size: 14px
+		&-input
+			font-size: 11px
+			min-width: 215px
+		&-btn 
+			min-width: 210px
+	.form-wrap__col
+		padding-right: 20px
+		margin-bottom: 14px
+
+	.history
+		&-bg-right
+			display: none
+		&-content
+			padding-top: calc(85px*0.63)
+		&-title
+			margin-bottom: calc(40px*0.63)
+			font-size: 44px 
+		&-subtitle
+			margin-bottom: calc(25px*0.63)
+			font-size: 22px
+		&-text 
+			margin-bottom: calc(30px*0.63)
+		&-posttext
+			margin-bottom: calc(30px*0.63)
+		&-sign
+			margin-left: 400px
+	.scroll-history
+		margin-bottom: calc(70px*0.63)
+
+	.howwork
+		padding: calc(80px*0.63) 0 calc(60px*0.63)
+		&-title 
+			font-size: 44px
+			margin-bottom: calc(50px*0.63)
+	.howwork-item
+		flex: 25% 
+		margin-bottom: 20px
+
+	.review
+		padding: calc(90px*0.63) 0 calc(130px*0.63)
+		&-title
+			margin-bottom: 40px
+			font-size: 42px
+		&-swiper 
+			margin: 0
+		&-slide
+			&-title
+				padding: 15px 40px
+			&-content
+				padding: 15px 30px 25px
+			&-rectangle-1
+				left: 35px
+				right: 35px
+			&-rectangle-2
+				left: 55px
+				right: 55px
+		&-swiper-next
+			right: -50px
+		&-swiper-prev
+			left: -50px
+
+	.top7
+		padding: calc(75px*0.63) 0 calc(50px*0.63)
+		&-hide
+			display: none
+		&-title
+			text-align: center
+
+	.marker
+		display: none
+
+	.footer 
+		&-container
+			flex-wrap: wrap
+		&-logo
+			order: 2
+			&-title 
+				font-size: 22px
+			&-subtitle
+				margin-bottom: 10px
+				font-size: 14px
+		&-menu
+			order 1
+			width: 100%
+			margin-bottom: 20px
+			&-title 
+				display: none
+			& .nav-item
+				font-size: 16px
+		&-callback 
+			order: 3
+			&-title 
+				display: none
+			&-tel 
+				padding-left: 35px
+				font-size: 18px
 
 
 @media only screen and (max-width : 767px)
@@ -339,6 +523,104 @@
 		&__span--24
 			font-size: 18px
 
+	.question
+		padding: calc(100px*0.48) 0 calc(90px*0.48)
+		&-content
+			margin-left: auto
+		&-title 
+			font-size: 26px
+		&-subtitle
+			font-size: 13px
+		&-input 
+			font-size: 10px
+			min-width: 245px
+	.form-wrap__col
+		padding-right: 10px
+
+	.history
+		&-content
+			padding-top: calc(85px*0.48)
+		&-title
+			margin-bottom: calc(40px*0.48)
+			font-size: 36px 
+		&-subtitle
+			margin-bottom: calc(25px*0.48)
+			font-size: 20px
+		&-text 
+			margin-bottom: calc(30px*0.48)
+			font-size: 13px
+		&-posttext
+			margin-bottom: calc(30px*0.48)
+			font-size: 13px
+		&-sign
+			margin-left: 280px
+			font-size: 13px
+	.scroll-history
+		margin-bottom: calc(70px*0.48)
+	.scrollbar-wrap
+		padding-right: 35px
+
+	.howwork
+		padding: calc(80px*0.48) 0 calc(60px*0.48)
+		&-title 
+			font-size: 42px
+			margin-bottom: calc(50px*0.48)
+	.howwork-item
+		margin-bottom: 15px
+		&__title 
+			font-size: 16px 
+			margin-bottom: 15px 
+		&-img
+			margin-bottom: 20px
+
+	.review
+		padding: calc(90px*0.48) 0 calc(130px*0.48)
+		&-title
+			margin-bottom: 30px
+			font-size: 38px
+		&-slide-title
+			padding: 10px 30px
+		&-slide-content
+			& span 
+				font-size: 15px
+			& p 
+				font-size: 13px
+		&-swiper-next
+			display: none
+		&-swiper-prev
+			display: none
+
+	.top7
+		padding: calc(75px*0.48) 0 calc(50px*0.48)
+		&-title
+			font-size: 36px
+	.acord 
+		&-head-title 
+			font-size: 13px
+		&-body
+			margin: 10px 0
+			padding: 10px
+			line-height: 1.5
+			font-size: 13px
+
+	.maps
+		height: 350px
+
+	.footer 
+		&-logo
+			&-title 
+				font-size: 16px
+			&-subtitle
+				font-size: 12px
+		&-menu
+			margin-bottom: 20px
+			& .nav-item
+				font-size: 12px
+		&-callback 
+			&-tel 
+				padding-left: 25px
+				font-size: 16px
+
 @media only screen and (max-width : 576px)
 
 	.hero
@@ -362,16 +644,20 @@
 				margin-bottom: 25px
 				padding-left: 70px
 
+	.header .nav
+		padding: 40px
+		font-size: 16px
+
+	.header-nav.nav-active .nav
+		& a:hover
+			font-size: 20px
+
 	.whywe
 		&-title
 			font-size: 28px
 		&-item
 			&__title
 				font-size: 14px
-
-	.footer
-		p
-			font-size: 12px
 
 	.consultation
 		&-title
@@ -412,6 +698,57 @@
 			font-size: 24px
 		&__span--24
 			font-size: 16px
+
+	.question
+		&-title 
+			font-size: 22px
+		&-input 
+			min-width: 215px
+	.form-wrap__col
+		padding-right: 10px
+
+	.history
+		&-title
+			font-size: 32px 
+		&-subtitle
+			font-size: 18px
+		&-text 
+			font-size: 12px
+		&-posttext
+			font-size: 12px
+		&-sign
+			margin-left: 250px
+			font-size: 12px
+	.scrollbar-wrap
+		padding-right: 25px
+
+	.howwork
+		&-title 
+			font-size: 38px
+	.howwork-item
+		flex: 100%
+		margin-bottom: 20px
+		&__title 
+			font-size: 15px 
+			margin-bottom: 12px 
+		&-img
+			margin-bottom: 15px
+
+	.footer 
+		&-logo
+			&-title 
+				font-size: 16px
+			&-subtitle
+				font-size: 12px
+		&-menu
+			margin-bottom: 20px
+			& .nav-item
+				margin-right: 8px
+				font-size: 12px
+		&-callback 
+			&-tel 
+				padding-left: 25px
+				font-size: 16px
 
 @media only screen and (max-width : 480px)
 
@@ -454,3 +791,87 @@
 			display: none
 		&__title
 			font-size: 16px
+
+	.question
+		text-align: center
+		&-input
+			width: 100%
+			margin-bottom: 10px
+			text-align: center
+	.form-wrap__col
+		width: 100%
+		margin-bottom: 10px
+
+	.history
+		&-title
+			font-size: 28px 
+		&-subtitle
+			font-size: 16px
+		&-text 
+			font-size: 12px
+		&-posttext
+			font-size: 12px
+		&-sign
+			margin-left: 140px
+			font-size: 12px
+	.scrollbar-wrap
+		padding-right: 15px
+
+	.howwork
+		&-title 
+			font-size: 34px
+	.howwork-item
+		margin-bottom: 15px
+		&__title 
+			font-size: 14px 
+			margin-bottom: 12px 
+		&-subtitle
+			font-size: 12px
+
+	.review
+		&-title
+			margin-bottom: 20px
+			font-size: 32px
+		&-slide-title
+			padding: 10px 20px
+			flex-direction: column-reverse
+			justify-content: center
+			text-align: center
+			&-name span 
+				font-size: 14px
+			&-btn
+				margin-bottom: 10px
+		&-slide-content
+			padding: 15px 20px 20px
+			& span 
+				font-size: 14px
+			& p 
+				font-size: 12px
+
+	.top7
+		&-title
+			font-size: 30px
+	.acord 
+		&-head-title 
+			font-size: 12px
+		&-body
+			margin: 5px 0
+			padding: 5px
+			line-height: 1.3
+			font-size: 12px
+
+	.footer 
+		&-container
+		&-logo 
+			order: 2
+			margin: 0 auto
+			text-align: center
+		&-menu 
+			display: none
+		&-callback
+			order: 1
+			margin: 0 auto
+			margin-bottom: 10px
+			&-subtel
+				text-align: center
+			
