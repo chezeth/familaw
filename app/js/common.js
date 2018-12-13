@@ -23,7 +23,7 @@ $(function() {
      return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
   }, "Введите Ваш телефон");
 
-  $(".form").each(function(index, el) {
+  $("#order").each(function(index, el) {
     $(el).addClass('form-' + index);
 
     $('.form-' + index).validate({
@@ -56,7 +56,7 @@ $(function() {
       url: "sendmail.php",
       data: data,
       success: function(data) {
-        $(".modal").popup("hide");
+        $("#order").popup("hide");
         $("#thanks").popup("show");
         setTimeout(function() {
           $(formName).trigger('reset');
