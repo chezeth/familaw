@@ -14,7 +14,8 @@ $(function() {
   });
 
 //-------------------------------попандер---------------------------------------
-  $('.modal').popup({transition: 'all 0.6s'});
+  $('#order').popup({transition: 'all 0.6s'});
+  $('#thanks').popup({transition: 'all 0.6s'});
 
 //------------------------------------form-------------------------------------------
   $('input[type="tel"]').mask('+0 (000) 000-00-00');
@@ -23,7 +24,7 @@ $(function() {
      return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
   }, "Введите Ваш телефон");
 
-  $("#order").each(function(index, el) {
+  $(".form").each(function(index, el) {
     $(el).addClass('form-' + index);
 
     $('.form-' + index).validate({
@@ -40,33 +41,39 @@ $(function() {
       },
       submitHandler: function(form) {
         var t = {
-          name: jQuery('.form-' + index).find("input[name=name]").val(),
-          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
-          subject: jQuery('.form-' + index).find("input[name=subject]").val()
+          name: $('.form-' + index).find("input[name=name]").val(),
+          phone: $('.form-' + index).find("input[name=phone]").val(),
+          subject: $('.form-' + index).find("input[name=subject]").val()
         };
-        ajaxSend('.form-' + index, t);
+        // ajaxSend('.form-' + index, t);
+        $('#order').popup("hide");
+        $("#thanks").popup("show");
+        setTimeout(function() {
+          $('.form-' + index).trigger('reset');
+        }, 2000);
       }
     });
 
   });
 
-  function ajaxSend(formName, data) {
-    jQuery.ajax({
-      type: "POST",
-      url: "sendmail.php",
-      data: data,
-      success: function(data) {
-        $("#order").popup("hide");
-        $("#thanks").popup("show");
-        setTimeout(function() {
-          $(formName).trigger('reset');
-        }, 2000);
-      },
-      error: function(){
-        alert("dont work")
-      }
-    });
-  }
+
+  // function ajaxSend(formName, data) {
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "sendmail.php",
+  //     data: data,
+  //     success: function(data) {
+  //       $('#order').popup("hide");
+  //       $("#thanks").popup("show");
+  //       setTimeout(function() {
+  //         $(formName).trigger('reset');
+  //       }, 2000);
+  //     },
+  //     error: function(){
+  //       alert("dont work")
+  //     }
+  //   });
+  // }
 
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
@@ -79,7 +86,7 @@ $(function() {
   });
 
 //-------------------------скорость якоря---------------------------------------
-  $("#menu").on("click","a", function (event) {
+  $(".menu-scroll").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;

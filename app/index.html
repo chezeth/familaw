@@ -3,11 +3,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>start</title>
+	<title>Крутейший Юрист</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="icon" href="img/favicon.ico">
+	<link rel="icon" href="img/flawicon.ico">
 	<meta name="theme-color" content="#000">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -31,7 +31,7 @@
 						<span class="hamburger__item"></span>
 					</span>
 				</button>
-				<nav class="header-nav" id="menu">
+				<nav class="header-nav menu-scroll">
 					<ul class="nav">
 						<li class="nav-item"><a href="#decide">Процесс</a></li>
 						<li class="nav-item"><a href="#cost">Услуги</a></li>
@@ -649,15 +649,15 @@
 				</div>
 				<div class="footer-menu">
 					<p class="footer-menu-title">Меню</p>
-					<nav class="footer-menu-nav" id="menu">
+					<nav class="footer-menu-nav menu-scroll">
 						<ul class="nav">
-							<li class="nav-item"><a href="#">Процесс</a></li>
-							<li class="nav-item"><a href="#">Услуги</a></li>
-							<li class="nav-item"><a href="#">Гарантии</a></li>
-							<li class="nav-item"><a href="#">Обо мне</a></li>
-							<li class="nav-item"><a href="#">Как мы работаем</a></li>
-							<li class="nav-item"><a href="#">Отзывы</a></li>
-							<li class="nav-item"><a href="#">Контакты</a></li>
+							<li class="nav-item"><a href="#decide">Процесс</a></li>
+							<li class="nav-item"><a href="#cost">Услуги</a></li>
+							<li class="nav-item"><a href="#guarantees">Гарантии</a></li>
+							<li class="nav-item"><a href="#history">Обо мне</a></li>
+							<li class="nav-item"><a href="#howwork">Как мы работаем</a></li>
+							<li class="nav-item"><a href="#review">Отзывы</a></li>
+							<li class="nav-item"><a href="#maps">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -678,11 +678,10 @@
 
 
 
-
 	<!-- 	modal -->
 	<div class="modal" id="order">
 		<div class="wrapper">
-			<form action="sendmail.php" class="form" method="post">
+			<form action="sendmail.php" class="form" method="post" id="formail">
 
 				<button class="close order_close" type="button"></button>
 
@@ -690,7 +689,7 @@
 				<input type="hidden" name="subject" value="Узнать подробнее!">
 				<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
 				<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
-				<button type="submit" class="btn-hollow footer__form_btn" name="submit" value="отправить">Отправить</button>
+				<button id="knopka" type="submit" class="btn-hollow footer__form_btn" name="submit" value="отправить">Отправить</button>
 				<p>Нажимая на кнопку, вы даете согласие на обработку своих <a class="modal-personal" href="#" target="_blank">персональных данных</a></p>
 
 			</form>
@@ -700,7 +699,7 @@
 	<div class="modal" id="thanks">
 		<button class="close thanks_close" type="button"></button>
 
-		<h3>Спасибо <br>за доверие!</h3>
+		<h3>Спасибо за доверие!</h3>
 		<p>Мы обязательно с вами свяжемся!</p>
 	</div>
 	<!-- 	modal end-->
