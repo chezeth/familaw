@@ -20,7 +20,7 @@ $(function() {
 //------------------------------------form-------------------------------------------
   $('input[type="tel"]').mask('+0 (000) 000-00-00');
 
-  jQuery.validator.addMethod("phoneno", function(phone_number, element) {
+  $.validator.addMethod("phoneno", function(phone_number, element) {
      return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
   }, "Введите Ваш телефон");
 

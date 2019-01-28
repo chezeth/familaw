@@ -43,7 +43,7 @@
 					</ul>
 				</nav>
 				<div class="header-callback">
-					<strong class="order_open header-callback__tel"><a href="#"><span>&#43;7 (917) </span>515-55-55</a></strong>
+					<strong class="header-callback__tel"><a href="tel:+79175155555"><span>&#43;7 (917) </span>515-55-55</a></strong>
 					<a href="#" class="order_open header-callback__order">Заказать звонок</a>
 				</div>
 			</div>
@@ -136,15 +136,23 @@
 		
 		<section class="consultation">
 			<div class="container">
-				<div class="consultation-content">
-					<p class="consultation-title"><span> Мы понимаем, </span>что у вас больше вопросов, чем ответов</p>
-					<p class="consultation-subtitle">
-					Оставьте заявку на бесплатную консультацию, и наш специалист ответит на все ваши вопросы</p>
-					<form class="consultation-form" action="#">
-						<input type="text" class="consultation-form-input" placeholder="Введите ваше имя">
-						<input type="tel" class="consultation-form-input" placeholder="Введите ваш телефон">
-						<input type="submit" class="btn btn-primary consultation-form-btn" value="Получить консультацию">
-					</form>
+				<div class="row justify-content-center">
+					<div class="consultation-content col-10 ">
+						<p class="consultation-title"><span> Мы понимаем, </span>что у вас больше вопросов, чем ответов</p>
+						<p class="consultation-subtitle">
+						Оставьте заявку на бесплатную консультацию, и наш специалист ответит на все ваши вопросы</p>
+						<form class="consultation-form form" action="#" method="post">
+							<div class="consultation-form-item consultation-form-input">
+								<input type="text" name="name" placeholder="Введите ваше имя" required>
+							</div>
+							<div class="consultation-form-item consultation-form-input">
+								<input type="tel" name="phone" placeholder="Введите ваш телефон" required pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+							</div>
+							<div class="consultation-form-item consultation-form-btn">
+								<input type="submit" class="btn btn-primary" value="Получить консультацию">
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -375,10 +383,10 @@
 								<div class="form-wrap">
 									<div class="form-wrap__col">
 										<div class="question-input-wrap">
-											<input type="text" class="question-input" placeholder="Введите ваше имя">				
+											<input type="text" class="question-input" placeholder="Введите ваше имя" required>				
 										</div>
 										<div class="question-input-wrap">
-											<input type="tel" class="question-input" placeholder="Введите ваш телефон">				
+											<input type="tel" class="question-input" placeholder="Введите ваш телефон" required pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">				
 										</div>
 									</div>
 									<div class="form-wrap__col">
@@ -663,7 +671,7 @@
 				</div>
 				<div class="footer-callback">
 					<p class="footer-callback-title">Контакты</p>
-					<p class="footer-callback-tel order_open"><a href="#"><span>&#43;7 (917) </span>515-55-55</a></p>
+					<p class="footer-callback-tel"><a href="tel:+79175155555"><span>&#43;7 (917) </span>515-55-55</a></p>
 					<p class="footer-callback-subtel">
 						<a href="#" class="order_open">Заказать звонок</a>
 					</p>
@@ -687,8 +695,12 @@
 
 				<h3>Оставьте заявку, мы свяжемся с Вами</h3>
 				<input type="hidden" name="subject" value="Узнать подробнее!">
-				<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
-				<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+				<div class="footer__form_line">
+					<input type="text" name="name" placeholder="Имя" required>
+				</div>
+				<div class="footer__form_line">
+					<input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+				</div>
 				<button id="knopka" type="submit" class="btn-hollow footer__form_btn" name="submit" value="отправить">Отправить</button>
 				<p>Нажимая на кнопку, вы даете согласие на обработку своих <a class="modal-personal" href="#" target="_blank">персональных данных</a></p>
 
